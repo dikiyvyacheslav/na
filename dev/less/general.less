@@ -3,9 +3,49 @@
 @import "imports/reset";
 @import "imports/fonts";
 @import "imports/icons";
+@import "imports/grid";
 a{
 	color: inherit;
 	text-decoration: inherit;
 }
 
 @import "imports/header";
+
+.fullHeight{
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	&-wrap{
+		height: 100%;
+		background: linear-gradient(to right, 
+			rgba(255,255,255, 0.75) 0%,
+			rgba(255,255,255, 0.75) 25%,
+			rgba(255,255,255, 0.75) 75%,
+			rgba(255,255,255, 0.75) 100%
+			);
+	}
+}
+&.firstSection{
+	background-image: url(../img/firstSection.png);
+	}
+
+.valign{
+	position: relative;
+	height: 100%;
+	&-container{
+		width: 100%;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+.logo-wrap{
+	text-align: center;
+}
+.company-name{
+	font-family: @regular-fontFamily;
+	color: @secondColor;
+	font-size: @companyName;
+	padding-top: 30px;
+}

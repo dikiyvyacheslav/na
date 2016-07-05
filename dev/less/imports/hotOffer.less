@@ -1,0 +1,38 @@
+.realty{
+	color: @blackColor;	
+	text-align: center;
+	p{
+		margin-bottom: 11px;
+	}
+	.realty-cover{
+		width: 100%/12*10;
+		margin: 0 auto 15px auto;
+		@media screen and (min-width: @tablet-width){
+			float: left;
+			width: 30%;
+			margin-right: 10px;
+		}
+		@media screen and (min-width: @full-width){
+			width:100%;
+		}
+		img{
+			width: 100%;
+		}
+	}
+	.realty-title{
+		font-size: @companyDescr;
+	}
+	.realty-subtitle{
+		font-size: @catalogSubTitle-fontsize;
+	}
+	.realty-price{
+		font-size: @catalogPrice-fontsize;
+	}
+	.realty-description{
+		text-align: justify;
+		font-size: @catalogSubTitle-fontsize;
+						
+	}
+	
+
+}

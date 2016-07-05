@@ -3,10 +3,43 @@
 @import "imports/reset";
 @import "imports/fonts";
 @import "imports/icons";
+@import "imports/ion.rangeSlider";
+@import "imports/ion.rangeSlider.skinHTML5";
 @import "imports/grid";
+@import "imports/hotOffer";
+
+body{
+	font-family: @regular-fontFamily;
+}
 a{
 	color: inherit;
 	text-decoration: inherit;
+}
+.btn{
+	border: none;
+	text-align: center;
+	text-transform: uppercase;
+	color: @whiteColor;
+	padding: 10px 20px;
+	font-size: @button-fontSize;
+	background: linear-gradient(to right, rgba(255,255,255,0.2) 50%, transparent 50%);
+	background-size: 200%;
+	background-position: 100%;
+	transition: background-position 0.5s ease;
+	cursor: pointer;
+	&:hover{
+		background-position: 0;
+	}
+	a&{
+		display: inline-block;
+	}
+	&-full{
+		box-sizing: border-box;
+		width: 100%;
+	}
+	&-default{
+		background-color: @secondColor;
+	}
 }
 
 @import "imports/header";
@@ -41,7 +74,7 @@ a{
 	}
 }
 .logo-wrap{
-	text-align: center;
+	text-align: left;
 }
 .company-name{
 	font-family: @regular-fontFamily;
@@ -49,3 +82,42 @@ a{
 	font-size: @companyName;
 	padding-top: 30px;
 }
+.company{
+	color: @secondColor;
+	text-align: center;
+	padding-top: 22px;
+	@media screen and (min-width:@tablet-width){
+		text-align: left;
+		padding-top: 142px;
+	}
+	&-name{
+		font-family: @regular-fontFamily;
+		color: @secondColor;
+		font-size: @companyName;
+		padding-top: 30px;
+		
+	}
+	&-title{
+		font-size: @companySlogan;
+		margin-bottom: 17px;
+		@media screen and (min-width: @tablet-width){
+			margin-bottom: 50px;
+		}
+	}
+	&-slogan{
+		font-size: @companyDescr;
+	}
+}
+.section {
+	padding: 29px 0;
+	&-blue{
+		background-color: @baseColor;
+		color: @whiteColor;
+	}
+	&-white{
+		background-color: @whiteColor;
+		color: @blackColor;
+	}
+}
+
+@import "imports/filter";
